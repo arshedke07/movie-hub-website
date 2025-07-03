@@ -1,0 +1,23 @@
+meta {
+  name: Upload
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3001/upload
+  body: multipartForm
+  auth: none
+}
+
+headers {
+  Content-Type: multipart/form-data
+}
+
+body:form-urlencoded {
+  : 
+}
+
+body:multipart-form {
+  myfile: @file(/Users/arshedke/Downloads/music/travis-scott-x-don-toliver-x-playboi-carti-trap-type-beat-206891.mp3)
+}
